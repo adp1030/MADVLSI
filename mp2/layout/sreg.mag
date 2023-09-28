@@ -1,0 +1,40 @@
+magic
+tech sky130A
+timestamp 1695859786
+<< locali >>
+rect 0 1495 230 1525
+rect 3450 1495 3470 1525
+rect 0 980 25 1495
+rect 3450 1295 3470 1325
+<< metal1 >>
+rect 0 1225 20 2265
+rect 0 90 20 1120
+rect 0 0 240 40
+use d_flipflop  d_flipflop_0
+timestamp 1695859786
+transform 1 0 455 0 1 650
+box -240 -650 585 1630
+use d_flipflop  d_flipflop_1
+timestamp 1695859786
+transform 1 0 1265 0 1 650
+box -240 -650 585 1630
+use d_flipflop  d_flipflop_2
+timestamp 1695859786
+transform 1 0 2075 0 1 650
+box -240 -650 585 1630
+use d_flipflop  d_flipflop_3
+timestamp 1695859786
+transform 1 0 2885 0 1 650
+box -240 -650 585 1630
+use sreg_inverter  sreg_inverter_0
+timestamp 1695854801
+transform 1 0 35 0 1 0
+box -35 90 195 2280
+<< labels >>
+rlabel locali 3470 1310 3470 1310 3 Qb
+rlabel locali 3470 1510 3470 1510 3 Q
+rlabel metal1 0 865 0 865 7 VN
+rlabel metal1 0 1610 0 1610 7 VP
+rlabel metal1 0 20 0 20 7 CLK
+rlabel locali 0 1510 0 1510 7 D
+<< end >>

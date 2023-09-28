@@ -1,0 +1,309 @@
+timestamp 1695859786
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sreg_inverter sreg_inverter_0 1 0 70 0 1 0
+use d_flipflop d_flipflop_3 1 0 5770 0 1 1300
+use d_flipflop d_flipflop_2 1 0 4150 0 1 1300
+use d_flipflop d_flipflop_1 1 0 2530 0 1 1300
+use d_flipflop d_flipflop_0 1 0 910 0 1 1300
+node "CLK" 1 245.13 0 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 38400 1120 0 0 0 0 0 0 0 0 0 0
+node "VN" 6 882.002 0 180 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 82400 4200 0 0 0 0 0 0 0 0 0 0
+node "VP" 7 881.934 0 2450 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 83200 4240 0 0 0 0 0 0 0 0 0 0
+node "Qb" 19 39.4381 6900 2590 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2400 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "Q" 19 39.4381 6900 2990 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2400 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 363 703.998 0 1960 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 79100 3100 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "D" "VP" 111.248
+cap "D" "VN" 53.6109
+cap "VN" "VP" 6.76923
+cap "CLK" "VN" 11.7333
+cap "Q" "Qb" 2.77174
+cap "sreg_inverter_0/VN" "d_flipflop_0/a_n230_1160#" 22.1815
+cap "sreg_inverter_0/VN" "d_flipflop_1/CLK" 146.397
+cap "d_flipflop_1/CLK" "d_flipflop_2/CLK" 4.02516
+cap "sreg_inverter_0/VN" "d_flipflop_1/a_n230_1160#" 16.8313
+cap "d_flipflop_1/a_n230_1160#" "d_flipflop_0/a_n230_1160#" 21.558
+cap "sreg_inverter_0/VN" "d_flipflop_0/a_n230_1160#" 4.23037
+cap "d_flipflop_0/Q" "d_flipflop_1/CLK" 0.511158
+cap "sreg_inverter_0/VN" "d_flipflop_1/CLK" 26.4421
+cap "d_flipflop_1/Db" "d_flipflop_1/a_n230_1160#" 32.5
+cap "d_flipflop_1/CLK" "d_flipflop_0/a_n230_1160#" 1.72287
+cap "sreg_inverter_0/VN" "d_flipflop_1/Db" 25.9727
+cap "d_flipflop_1/Db" "d_flipflop_0/VP" -1.38778e-17
+cap "d_flipflop_1/CLK" "d_flipflop_0/a_50_n50#" 0.191263
+cap "d_flipflop_1/Db" "d_flipflop_1/CLK" 5.97052
+cap "d_flipflop_1/a_50_n50#" "d_flipflop_3/VN" -5.68434e-14
+cap "d_flipflop_3/VN" "d_flipflop_1/a_n230_1160#" 4.23037
+cap "d_flipflop_2/a_n230_1560#" "d_flipflop_3/VN" 1.77636e-15
+cap "d_flipflop_3/VN" "d_flipflop_2/Db" 25.9727
+cap "d_flipflop_1/a_50_n50#" "d_flipflop_2/CLK" 0.191263
+cap "d_flipflop_2/a_n230_1160#" "d_flipflop_1/a_n230_1160#" 21.558
+cap "d_flipflop_2/a_n230_1160#" "d_flipflop_2/Db" 32.5
+cap "d_flipflop_2/CLK" "d_flipflop_1/a_n230_1160#" 1.72287
+cap "d_flipflop_2/CLK" "d_flipflop_2/Db" 5.97052
+cap "d_flipflop_2/a_n230_1160#" "d_flipflop_3/VN" 16.8313
+cap "d_flipflop_2/CLK" "d_flipflop_3/VN" 27.7159
+cap "d_flipflop_3/CLK" "d_flipflop_2/CLK" 4.02516
+cap "d_flipflop_1/Q" "d_flipflop_2/CLK" 0.511158
+cap "d_flipflop_2/a_n230_1160#" "d_flipflop_3/a_n230_1160#" 21.558
+cap "d_flipflop_3/Db" "d_flipflop_3/a_n230_1160#" 32.5
+cap "d_flipflop_3/CLK" "d_flipflop_3/VN" 26.9241
+cap "d_flipflop_2/a_50_n50#" "d_flipflop_3/CLK" 0.191263
+cap "d_flipflop_2/a_n230_1160#" "d_flipflop_3/VN" 4.23037
+cap "d_flipflop_3/CLK" "d_flipflop_2/a_n230_1160#" 1.72287
+cap "d_flipflop_3/Db" "d_flipflop_3/VN" 25.9727
+cap "d_flipflop_3/VN" "d_flipflop_3/a_n230_1160#" 16.8313
+cap "d_flipflop_3/CLK" "d_flipflop_2/Q" 0.511158
+cap "d_flipflop_3/CLK" "d_flipflop_3/Db" 5.97052
+cap "d_flipflop_3/CLK" "d_flipflop_3/a_n230_1160#" 1.42109e-14
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/VN" 2.27374e-13
+cap "sreg_inverter_0/VP" "d_flipflop_1/CLK" 9.37667
+cap "sreg_inverter_0/VP" "sreg_inverter_0/A" 153.455
+cap "sreg_inverter_0/VP" "sreg_inverter_0/Y" 18.3634
+cap "sreg_inverter_0/VP" "d_flipflop_0/a_n230_1160#" 1.19837
+cap "sreg_inverter_0/VN" "d_flipflop_1/CLK" 16.8315
+cap "sreg_inverter_0/VN" "sreg_inverter_0/A" 82.9468
+cap "sreg_inverter_0/VP" "d_flipflop_0/a_n230_1560#" 1.69918
+cap "sreg_inverter_0/VN" "sreg_inverter_0/Y" 15.7316
+cap "sreg_inverter_0/VN" "d_flipflop_0/a_n230_1160#" 11.1678
+cap "sreg_inverter_0/A" "d_flipflop_1/CLK" 19.3178
+cap "sreg_inverter_0/Y" "d_flipflop_1/CLK" 7.01504
+cap "sreg_inverter_0/Y" "sreg_inverter_0/A" 40.7623
+cap "d_flipflop_0/a_n230_1160#" "d_flipflop_1/CLK" 5.68434e-14
+cap "sreg_inverter_0/VN" "d_flipflop_0/a_n230_1560#" 5.68434e-14
+cap "d_flipflop_0/a_n230_1160#" "sreg_inverter_0/A" 7.66332
+cap "sreg_inverter_0/Y" "d_flipflop_0/a_n230_1160#" 40.0816
+cap "d_flipflop_0/a_n230_1560#" "sreg_inverter_0/A" 5.16129
+cap "sreg_inverter_0/VN" "sreg_inverter_0/VP" -13.1604
+cap "sreg_inverter_0/Y" "d_flipflop_0/a_n230_1560#" 0.2723
+cap "sreg_inverter_0/VN" "sreg_inverter_0/VP" -5.56975
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_1/D" 0.135732
+cap "d_flipflop_1/Db" "d_flipflop_1/a_n230_1560#" 4.58533
+cap "d_flipflop_1/a_n230_1160#" "d_flipflop_1/D" 0.399687
+cap "sreg_inverter_0/VP" "d_flipflop_1/a_n230_1560#" 2.96907
+cap "sreg_inverter_0/VN" "d_flipflop_1/a_n230_1560#" 1.13687e-13
+cap "d_flipflop_1/Db" "d_flipflop_1/D" -1.0394
+cap "d_flipflop_1/Db" "d_flipflop_1/a_n230_1160#" 74.6531
+cap "d_flipflop_1/CLK" "d_flipflop_1/D" 2.13473
+cap "sreg_inverter_0/VP" "d_flipflop_1/D" 0.874938
+cap "sreg_inverter_0/VN" "d_flipflop_1/D" 5.68434e-14
+cap "sreg_inverter_0/VP" "d_flipflop_1/a_n230_1160#" 2.90387
+cap "sreg_inverter_0/VN" "d_flipflop_1/a_n230_1160#" 5.33599
+cap "d_flipflop_1/Db" "d_flipflop_1/CLK" 50.6901
+cap "sreg_inverter_0/VP" "d_flipflop_1/Db" 44.4027
+cap "d_flipflop_1/CLK" "d_flipflop_0/a_n230_1160#" 0.00523118
+cap "sreg_inverter_0/VN" "d_flipflop_1/Db" 50.3703
+cap "sreg_inverter_0/VP" "d_flipflop_1/CLK" 6.84975
+cap "sreg_inverter_0/VN" "d_flipflop_1/CLK" 11.4366
+cap "sreg_inverter_0/VP" "d_flipflop_0/Q" 1.7053e-13
+cap "d_flipflop_3/VN" "d_flipflop_3/VP" -5.56975
+cap "d_flipflop_3/VP" "d_flipflop_2/a_n230_1160#" 2.90387
+cap "d_flipflop_2/D" "d_flipflop_2/Db" -1.0394
+cap "d_flipflop_2/D" "d_flipflop_2/CLK" 2.13473
+cap "d_flipflop_2/Db" "d_flipflop_3/VN" 50.3703
+cap "d_flipflop_2/Db" "d_flipflop_2/a_n230_1160#" 74.6531
+cap "d_flipflop_3/VN" "d_flipflop_2/CLK" 11.5999
+cap "d_flipflop_2/CLK" "d_flipflop_1/a_n230_1160#" 0.00523118
+cap "d_flipflop_2/D" "d_flipflop_2/a_n230_1160#" 0.399687
+cap "d_flipflop_3/VN" "d_flipflop_2/a_n230_1160#" 5.33599
+cap "d_flipflop_3/VP" "d_flipflop_2/a_n230_1560#" 2.96907
+cap "d_flipflop_2/Db" "d_flipflop_2/a_n230_1560#" 4.58533
+cap "d_flipflop_2/Db" "d_flipflop_3/VP" 44.4027
+cap "d_flipflop_2/CLK" "d_flipflop_3/VP" 6.84975
+cap "d_flipflop_2/Db" "d_flipflop_2/CLK" 50.6901
+cap "d_flipflop_2/D" "d_flipflop_2/a_n230_1560#" 0.135732
+cap "d_flipflop_2/D" "d_flipflop_3/VP" 0.874938
+cap "d_flipflop_3/CLK" "d_flipflop_3/VN" 11.5999
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/VN" 5.33599
+cap "d_flipflop_3/Db" "d_flipflop_3/D" -1.0394
+cap "d_flipflop_3/CLK" "d_flipflop_3/Db" 50.6901
+cap "d_flipflop_3/Db" "d_flipflop_3/a_n230_1560#" 2.13333
+cap "d_flipflop_3/Db" "d_flipflop_3/a_n230_1160#" 71.183
+cap "d_flipflop_3/VP" "d_flipflop_3/D" 0.874938
+cap "d_flipflop_3/CLK" "d_flipflop_3/VP" 6.84975
+cap "d_flipflop_3/VP" "d_flipflop_3/a_n230_1160#" 1.31983
+cap "d_flipflop_3/Db" "d_flipflop_3/VN" 50.3703
+cap "d_flipflop_3/CLK" "d_flipflop_2/a_n230_1160#" 0.00523118
+cap "d_flipflop_3/VP" "d_flipflop_3/VN" -5.56975
+cap "d_flipflop_3/CLK" "d_flipflop_3/D" 2.13473
+cap "d_flipflop_3/D" "d_flipflop_3/a_n230_1160#" 0.199843
+cap "d_flipflop_3/VP" "d_flipflop_3/Db" 44.4027
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/Db" 3.47013
+cap "d_flipflop_3/Q" "d_flipflop_3/Qb" -1.38587
+cap "d_flipflop_3/CLK" "d_flipflop_3/a_n230_1160#" 1.42109e-14
+cap "d_flipflop_3/VP" "d_flipflop_3/a_n230_1560#" 2.96907
+cap "d_flipflop_3/D" "d_flipflop_3/a_n230_1560#" 0.135732
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/VP" 1.58403
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/D" 0.199843
+cap "d_flipflop_3/Db" "d_flipflop_3/a_n230_1560#" 2.452
+cap "d_flipflop_0/a_n230_1160#" "sreg_inverter_0/VP" 0.282743
+cap "d_flipflop_0/CLK" "sreg_inverter_0/VP" 10.4655
+cap "sreg_inverter_0/A" "d_flipflop_0/a_n230_1160#" 0.0303697
+cap "d_flipflop_0/a_n230_1560#" "sreg_inverter_0/Y" 0.222796
+cap "d_flipflop_0/CLK" "d_flipflop_1/CLK" 1.71069
+cap "d_flipflop_0/a_n230_1560#" "sreg_inverter_0/VP" 70.5965
+cap "d_flipflop_0/CLK" "sreg_inverter_0/Y" 0.886422
+cap "d_flipflop_0/a_n230_1560#" "sreg_inverter_0/A" 1.39389
+cap "sreg_inverter_0/Y" "sreg_inverter_0/VP" -2.63201
+cap "d_flipflop_1/D" "sreg_inverter_0/VN" -1.38778e-17
+cap "sreg_inverter_0/VN" "sreg_inverter_0/VP" 5.55112e-17
+cap "sreg_inverter_0/A" "sreg_inverter_0/VN" 0.445237
+cap "sreg_inverter_0/A" "sreg_inverter_0/Y" 20.1852
+cap "d_flipflop_0/CLK" "sreg_inverter_0/VP" 5.75211
+cap "d_flipflop_0/CLK" "sreg_inverter_0/A" 0.0635309
+cap "d_flipflop_1/D" "sreg_inverter_0/VP" 8.24807
+cap "d_flipflop_1/a_n230_1160#" "d_flipflop_0/CLK" 0.100396
+cap "sreg_inverter_0/A" "sreg_inverter_0/VP" 414.455
+cap "d_flipflop_1/Q" "d_flipflop_0/CLK" 0.0321164
+cap "sreg_inverter_0/VN" "d_flipflop_0/a_n230_1160#" 1.38778e-17
+cap "d_flipflop_0/a_460_2340#" "sreg_inverter_0/VP" -1.42109e-14
+cap "sreg_inverter_0/Y" "d_flipflop_0/a_n230_1160#" 3.7322
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_0/CLK" 0.417767
+cap "sreg_inverter_0/VN" "d_flipflop_1/D" 5.55112e-17
+cap "d_flipflop_1/a_n230_1560#" "sreg_inverter_0/VP" 39.9833
+cap "d_flipflop_1/a_n230_1560#" "sreg_inverter_0/VN" -1.11022e-16
+cap "sreg_inverter_0/VP" "sreg_inverter_0/VN" 5.55112e-17
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_0/CLK" 0.135593
+cap "d_flipflop_1/D" "d_flipflop_1/CLK" 0.629465
+cap "d_flipflop_1/Db" "d_flipflop_1/CLK" 3.06383
+cap "sreg_inverter_0/VP" "d_flipflop_1/CLK" 4.66541
+cap "d_flipflop_1/D" "d_flipflop_2/D" 8.77197
+cap "sreg_inverter_0/VP" "d_flipflop_2/D" 7.54398
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_0/a_460_2340#" 0.00463513
+cap "d_flipflop_0/a_460_2340#" "sreg_inverter_0/VP" -1.13687e-13
+cap "d_flipflop_0/a_460_2340#" "sreg_inverter_0/VN" -5.55112e-17
+cap "d_flipflop_1/CLK" "d_flipflop_1/Db" 0.0689655
+cap "d_flipflop_1/D" "d_flipflop_1/a_n230_1160#" 2.79781
+cap "d_flipflop_1/Db" "d_flipflop_1/a_n230_1160#" 0.190025
+cap "d_flipflop_1/Db" "d_flipflop_1/D" 0.0499292
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_0/Qb" 0.00364547
+cap "d_flipflop_0/Qb" "sreg_inverter_0/VP" -5.68434e-14
+cap "sreg_inverter_0/VP" "d_flipflop_1/a_n230_1160#" 1.75752
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_1/D" 45.3331
+cap "d_flipflop_1/a_n230_1560#" "d_flipflop_1/Db" 9.44429
+cap "sreg_inverter_0/VN" "d_flipflop_1/a_n230_1160#" 1.38778e-17
+cap "sreg_inverter_0/VP" "d_flipflop_1/Db" 21.4245
+cap "sreg_inverter_0/VP" "d_flipflop_1/D" 79.2697
+cap "d_flipflop_2/Db" "d_flipflop_2/CLK" 0.0689655
+cap "d_flipflop_2/Db" "d_flipflop_3/VP" 21.4245
+cap "d_flipflop_3/VP" "d_flipflop_2/a_n230_1160#" 1.75752
+cap "d_flipflop_1/Db" "d_flipflop_1/CLK" 0.0689655
+cap "d_flipflop_1/Qb" "d_flipflop_2/a_n230_1560#" 0.00364547
+cap "d_flipflop_2/a_n230_1560#" "d_flipflop_2/D" 45.3331
+cap "d_flipflop_1/CLK" "d_flipflop_0/a_460_2340#" 0.113116
+cap "d_flipflop_2/Db" "d_flipflop_2/a_n230_1160#" 0.190025
+cap "d_flipflop_3/VP" "d_flipflop_2/CLK" 4.66541
+cap "d_flipflop_1/a_460_2340#" "d_flipflop_2/a_n230_1560#" 0.00463513
+cap "d_flipflop_1/CLK" "d_flipflop_1/D" 0.209885
+cap "d_flipflop_3/VP" "d_flipflop_2/D" 79.2697
+cap "d_flipflop_2/Db" "d_flipflop_2/CLK" 3.06383
+cap "d_flipflop_2/D" "d_flipflop_3/D" 4.38599
+cap "d_flipflop_2/a_n230_1560#" "d_flipflop_1/CLK" 0.55336
+cap "d_flipflop_2/Db" "d_flipflop_2/D" 0.0499292
+cap "d_flipflop_1/CLK" "d_flipflop_2/CLK" 1.71069
+cap "d_flipflop_0/Qb" "d_flipflop_1/CLK" 0.0724638
+cap "d_flipflop_2/D" "d_flipflop_2/a_n230_1160#" 2.79781
+cap "d_flipflop_1/CLK" "d_flipflop_0/CLK" 1.71069
+cap "d_flipflop_3/VP" "d_flipflop_1/CLK" 11.0158
+cap "d_flipflop_1/CLK" "d_flipflop_3/D" 0.0321164
+cap "d_flipflop_2/D" "d_flipflop_2/CLK" 0.629465
+cap "d_flipflop_3/VP" "d_flipflop_2/a_n230_1560#" 39.9833
+cap "d_flipflop_1/CLK" "d_flipflop_2/a_n230_1160#" 0.100396
+cap "d_flipflop_2/Db" "d_flipflop_2/a_n230_1560#" 9.44429
+cap "d_flipflop_3/Db" "d_flipflop_3/VP" 21.4245
+cap "d_flipflop_3/CLK" "d_flipflop_3/Db" 3.06383
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_3/Db" 6.24429
+cap "d_flipflop_2/CLK" "d_flipflop_1/CLK" 1.71069
+cap "d_flipflop_2/CLK" "d_flipflop_2/D" 0.209885
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_2/CLK" 0.100396
+cap "d_flipflop_1/a_460_2340#" "d_flipflop_2/CLK" 0.113116
+cap "d_flipflop_3/D" "d_flipflop_3/Db" 0.0499292
+cap "d_flipflop_1/Qb" "d_flipflop_2/CLK" 0.0724638
+cap "d_flipflop_2/CLK" "d_flipflop_3/CLK" 1.71069
+cap "d_flipflop_3/D" "d_flipflop_2/D" 4.38599
+cap "d_flipflop_3/CLK" "d_flipflop_3/VP" 4.66541
+cap "d_flipflop_2/CLK" "d_flipflop_3/VP" 11.0158
+cap "d_flipflop_3/D" "d_flipflop_3/a_n230_1160#" 1.3989
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_3/VP" 34.7085
+cap "d_flipflop_2/CLK" "d_flipflop_2/Db" 0.0689655
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_2/CLK" 0.417767
+cap "d_flipflop_3/Q" "d_flipflop_2/CLK" 0.0321164
+cap "d_flipflop_3/D" "d_flipflop_3/VP" 86.8136
+cap "d_flipflop_3/CLK" "d_flipflop_3/D" 0.629465
+cap "d_flipflop_3/D" "d_flipflop_3/a_n230_1560#" 44.8201
+cap "d_flipflop_3/D" "d_flipflop_3/Q" 4.38599
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/Db" 0.190025
+cap "d_flipflop_3/Db" "d_flipflop_3/CLK" 0.0689655
+cap "d_flipflop_3/CLK" "d_flipflop_3/Db" 0.0689655
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_3/D" 0.512975
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_2/Qb" 0.00364547
+cap "d_flipflop_3/CLK" "d_flipflop_3/D" 0.209885
+cap "d_flipflop_3/CLK" "d_flipflop_2/Qb" 0.0724638
+cap "d_flipflop_3/VP" "d_flipflop_3/Q" 7.54398
+cap "d_flipflop_2/CLK" "d_flipflop_3/a_n230_1560#" 0.135593
+cap "d_flipflop_3/VP" "d_flipflop_3/a_n230_1160#" 1.75752
+cap "d_flipflop_3/CLK" "d_flipflop_2/CLK" 1.71069
+cap "d_flipflop_3/Q" "d_flipflop_3/D" 4.38599
+cap "d_flipflop_3/VP" "d_flipflop_3/a_n230_1560#" 5.2748
+cap "d_flipflop_2/a_460_2340#" "d_flipflop_3/a_n230_1560#" 0.00463513
+cap "d_flipflop_3/a_n230_1160#" "d_flipflop_3/D" 1.3989
+cap "d_flipflop_3/CLK" "d_flipflop_2/a_460_2340#" 0.113116
+cap "d_flipflop_3/CLK" "d_flipflop_3/VP" 3.98381
+cap "d_flipflop_3/a_n230_1560#" "d_flipflop_3/Db" 3.2
+cap "d_flipflop_3/Q" "d_flipflop_3/Qb" -1.38587
+cap "d_flipflop_1/D" "sreg_inverter_0/VP" 6.97913
+cap "d_flipflop_0/CLK" "d_flipflop_1/Q" 0.00496066
+cap "d_flipflop_0/CLK" "d_flipflop_1/CLK" 0.150943
+cap "d_flipflop_0/CLK" "sreg_inverter_0/VP" 0.934564
+cap "d_flipflop_1/D" "d_flipflop_2/D" 7.26684
+cap "d_flipflop_1/D" "sreg_inverter_0/VP" 18.4587
+cap "d_flipflop_2/D" "sreg_inverter_0/VP" 6.65597
+cap "d_flipflop_2/CLK" "d_flipflop_1/CLK" 0.150943
+cap "d_flipflop_1/D" "d_flipflop_1/CLK" 0.00572994
+cap "d_flipflop_3/D" "d_flipflop_1/CLK" 0.00496066
+cap "d_flipflop_3/D" "d_flipflop_2/D" 3.63342
+cap "d_flipflop_0/CLK" "d_flipflop_1/CLK" 0.150943
+cap "d_flipflop_3/VP" "d_flipflop_1/CLK" 1.02562
+cap "d_flipflop_3/VP" "d_flipflop_2/D" 18.4587
+cap "d_flipflop_3/Q" "d_flipflop_2/CLK" 0.00496066
+cap "d_flipflop_3/D" "d_flipflop_2/D" 3.63342
+cap "d_flipflop_3/Q" "d_flipflop_3/D" 3.63342
+cap "d_flipflop_2/CLK" "d_flipflop_1/CLK" 0.150943
+cap "d_flipflop_2/CLK" "d_flipflop_3/CLK" 0.150943
+cap "d_flipflop_2/CLK" "d_flipflop_3/VP" 1.02562
+cap "d_flipflop_3/VP" "d_flipflop_3/D" 25.1147
+cap "d_flipflop_2/CLK" "d_flipflop_2/D" 0.00572994
+cap "d_flipflop_3/CLK" "d_flipflop_2/CLK" 0.150943
+cap "d_flipflop_3/VP" "d_flipflop_3/Q" 6.65597
+cap "d_flipflop_3/Q" "d_flipflop_3/D" 3.63342
+cap "d_flipflop_3/CLK" "d_flipflop_3/VP" 0.385351
+cap "d_flipflop_3/CLK" "d_flipflop_3/D" 0.00572994
+merge "d_flipflop_0/CLK" "d_flipflop_3/CLK" -537.63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11200 -920 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_3/CLK" "d_flipflop_2/CLK"
+merge "d_flipflop_2/CLK" "d_flipflop_1/CLK"
+merge "d_flipflop_1/CLK" "CLK"
+merge "d_flipflop_3/VN" "d_flipflop_2/VN" -4515.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -329600 -20920 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_2/VN" "d_flipflop_0/VN"
+merge "d_flipflop_0/VN" "d_flipflop_1/VN"
+merge "d_flipflop_1/VN" "sreg_inverter_0/VN"
+merge "sreg_inverter_0/VN" "VSUBS"
+merge "VSUBS" "VN"
+merge "d_flipflop_0/Db" "sreg_inverter_0/Y" -201.124 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_0/D" "sreg_inverter_0/A" -526.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3300 -340 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sreg_inverter_0/A" "D"
+merge "d_flipflop_3/Q" "Q" -72.5247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2400 -200 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_1/Qb" "d_flipflop_2/Db" -322.384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_2/Qb" "d_flipflop_3/Db" -322.384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_0/VP" "d_flipflop_3/VP" -5103.26 0 0 0 0 -260400 -17600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -332800 -21120 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_3/VP" "d_flipflop_2/VP"
+merge "d_flipflop_2/VP" "d_flipflop_1/VP"
+merge "d_flipflop_1/VP" "sreg_inverter_0/VP"
+merge "sreg_inverter_0/VP" "VP"
+merge "d_flipflop_2/Q" "d_flipflop_3/D" -249.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_0/Q" "d_flipflop_1/D" -228.038 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_3/Qb" "Qb" -39.4381 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2400 -200 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_0/Qb" "d_flipflop_1/Db" -322.384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_flipflop_1/Q" "d_flipflop_2/D" -249.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0 0 0 0 0 0 0

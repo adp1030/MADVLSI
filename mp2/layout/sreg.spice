@@ -1,0 +1,36 @@
+* NGSPICE file created from sreg.ext - technology: sky130A
+
+.subckt sreg_inverter A Y VP VN
+X0 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X1 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt d_flipflop Db D Q Qb VP VN CLK
+X0 a_n230_1560# a_n230_1160# VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X1 a_n230_1560# a_n230_1160# a_50_n50# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X2 Qb CLK a_n230_1160# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X3 a_460_2340# CLK VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X4 Q Qb a_460_2340# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X5 a_460_2340# Q Qb VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X6 a_50_n50# a_n230_1560# a_n230_1160# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X7 a_n230_1560# CLK D VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X8 Q Qb VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X9 VN Q Qb VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X10 VN CLK a_50_n50# VN sky130_fd_pr__nfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X11 VP a_n230_1560# a_n230_1160# VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X12 Q CLK a_n230_1560# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X13 a_n230_1160# CLK Db VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+
+* Top level circuit sreg
+
+Xsreg_inverter_0 D d_flipflop_0/Db VP VN sreg_inverter
+Xd_flipflop_0 d_flipflop_0/Db D d_flipflop_1/D d_flipflop_1/Db VP VN CLK d_flipflop
+Xd_flipflop_1 d_flipflop_1/Db d_flipflop_1/D d_flipflop_2/D d_flipflop_2/Db VP VN
++ CLK d_flipflop
+Xd_flipflop_2 d_flipflop_2/Db d_flipflop_2/D d_flipflop_3/D d_flipflop_3/Db VP VN
++ CLK d_flipflop
+Xd_flipflop_3 d_flipflop_3/Db d_flipflop_3/D Q Qb VP VN CLK d_flipflop
+.end
+
