@@ -53,6 +53,10 @@ N 480 -110 540 -110 {
 lab=Vout}
 N 160 -100 220 -100 {
 lab=#net4}
+N -100 -230 -100 -220 {
+lab=Vout}
+N -100 -160 -100 -150 {
+lab=GND}
 C {madvlsi/vdd.sym} 0 -240 3 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 0 20 1 0 {name=l2 lab=GND}
 C {madvlsi/vsource.sym} -190 -20 0 0 {name=Vdd
@@ -64,7 +68,7 @@ value=0.5}
 C {madvlsi/gnd.sym} -190 -150 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -190 -230 1 0 {name=p1 sig_type=std_logic lab=V1}
 C {madvlsi/vsource.sym} -290 -190 0 0 {name=v2
-value=1}
+value=0.5}
 C {madvlsi/gnd.sym} -290 -150 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -290 -230 1 0 {name=p2 sig_type=std_logic lab=V2}
 C {madvlsi/isource.sym} -290 -20 2 0 {name=Ib
@@ -85,7 +89,11 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 650 -150 0 0 {name=SPICE only_toplevel=false value=".dc v1 0 1.8 0.001 v2 0.6 1.6 0.2
-.save v(Vout) v(V1) v(V2)"}
+C {devices/code_shown.sym} 650 -150 0 0 {name=SPICE only_toplevel=false value=".dc v1 0 1.8 0.001
+.save v(Vout) i(Vout) v(V1) v(V2)"}
 C {/home/madvlsi/Documents/MADVLSI/mp3/bias_gen/bias_gen.sym} 0 0 0 0 {name=X1}
 C {/home/madvlsi/Documents/MADVLSI/mp3/diff_amp/diff_amp.sym} 140 -40 0 0 {name=X2}
+C {madvlsi/vsource.sym} -100 -190 0 0 {name=vout
+value=1}
+C {madvlsi/gnd.sym} -100 -150 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} -100 -230 1 0 {name=p8 sig_type=std_logic lab=Vout}
