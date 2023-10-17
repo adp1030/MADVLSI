@@ -10,7 +10,7 @@ lab=#net1}
 N 160 -80 220 -80 {
 lab=#net2}
 N 160 -120 220 -120 {
-lab=#net3}
+lab=Vbp}
 N 100 -240 100 -160 {
 lab=VDD}
 N 100 -20 100 20 {
@@ -52,7 +52,13 @@ lab=VB}
 N 480 -110 540 -110 {
 lab=Vout}
 N 160 -100 220 -100 {
-lab=#net4}
+lab=Vbn}
+N 170 -190 170 -120 {
+lab=Vbp}
+N 190 -190 190 -100 {
+lab=Vbn}
+N 170 -80 170 -40 {}
+N 190 -60 190 -40 {}
 C {madvlsi/vdd.sym} 0 -240 3 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 0 20 1 0 {name=l2 lab=GND}
 C {madvlsi/vsource.sym} -190 -20 0 0 {name=Vdd
@@ -85,7 +91,11 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 650 -150 0 0 {name=SPICE only_toplevel=false value=".dc v1 0 1.8 0.001 v2 0.6 1.6 0.2
-.save v(Vout) v(V1) v(V2)"}
+C {devices/code_shown.sym} 650 -150 0 0 {name=SPICE only_toplevel=false value=".dc v1 0 1.8 0.001
+.save all"}
 C {/home/madvlsi/Documents/MADVLSI/mp3/bias_gen/bias_gen.sym} 0 0 0 0 {name=X1}
 C {/home/madvlsi/Documents/MADVLSI/mp3/diff_amp/diff_amp.sym} 140 -40 0 0 {name=X2}
+C {devices/lab_pin.sym} 170 -190 1 0 {name=p8 sig_type=std_logic lab=Vbp}
+C {devices/lab_pin.sym} 190 -190 1 0 {name=p9 sig_type=std_logic lab=Vbn}
+C {devices/lab_pin.sym} 170 -40 3 0 {name=p10 sig_type=std_logic lab=Vcp}
+C {devices/lab_pin.sym} 190 -40 3 0 {name=p11 sig_type=std_logic lab=Vcn}
