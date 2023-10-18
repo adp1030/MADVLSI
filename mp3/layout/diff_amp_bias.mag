@@ -1,0 +1,39 @@
+magic
+tech sky130A
+timestamp 1697644194
+<< locali >>
+rect 2770 5940 2830 5960
+rect 2770 4420 2790 5920
+rect 2810 4460 2830 5940
+rect 2810 4440 2925 4460
+rect 2770 4400 2905 4420
+rect 4310 3055 4330 3075
+rect 0 2890 20 2910
+rect 2900 1640 2920 1660
+rect 2900 1575 2920 1595
+rect 2840 1535 2900 1555
+rect 2840 65 2860 1535
+rect 2770 45 2860 65
+rect 2880 20 2900 140
+rect 2770 0 2900 20
+<< metal1 >>
+rect 0 3125 15 3145
+rect 2765 3125 2905 4325
+rect 0 2795 15 2815
+rect 2765 210 2905 2820
+use bias_gen  bias_gen_0
+timestamp 1697632565
+transform 1 0 120 0 1 120
+box -120 -120 2650 5840
+use diff_amp  diff_amp_0
+timestamp 1697586785
+transform 1 0 3015 0 1 255
+box -115 -145 1315 4225
+<< labels >>
+rlabel locali 0 2900 0 2900 7 VB
+rlabel metal1 0 3135 0 3135 7 VP
+rlabel metal1 0 2805 0 2805 7 VN
+rlabel locali 2900 1650 2900 1650 7 V2
+rlabel locali 2900 1585 2900 1585 7 V1
+rlabel locali 4330 3065 4330 3065 3 Vout
+<< end >>

@@ -1,0 +1,191 @@
+timestamp 1697644194
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use diff_amp diff_amp_0 1 0 6030 0 1 510
+use bias_gen bias_gen_0 1 0 240 0 1 240
+node "m1_5530_420#" 2 3071.47 5530 420 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1461600 11000 0 0 0 0 0 0 0 0 0 0
+node "VN" 0 26.6714 0 5590 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1200 140 0 0 0 0 0 0 0 0 0 0
+node "m1_5530_6250#" 1 1486.82 5530 6250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 672000 5360 0 0 0 0 0 0 0 0 0 0
+node "VP" 0 26.836 0 6250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1200 140 0 0 0 0 0 0 0 0 0 0
+node "li_5540_0#" 160 170.86 5540 0 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20000 1080 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_5540_90#" 1037 1387.39 5540 90 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 129600 6560 0 0 0 0 0 0 0 0 0 0 0 0
+node "V1" 13 27.5649 5800 3150 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "V2" 13 27.5649 5800 3280 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "VB" 13 34.0396 0 5780 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vout" 13 34.0396 8620 6110 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_5540_8800#" 1046 879.668 5540 8800 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130800 6620 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_5540_11880#" 1059 897.427 5540 11880 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 132400 6700 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_5530_6250#" "li_5540_8800#" 21.9213
+cap "V1" "V2" 8.64407
+cap "m1_5530_6250#" "m1_5530_420#" 18.6667
+cap "VN" "VB" 0.868418
+cap "li_5540_0#" "m1_5530_420#" 6.53637
+cap "VN" "VP" 1.97015
+cap "m1_5530_6250#" "li_5540_11880#" 3.76663
+cap "li_5540_90#" "m1_5530_420#" 908.449
+cap "li_5540_90#" "li_5540_0#" 130.096
+cap "V1" "m1_5530_420#" 11.7538
+cap "li_5540_11880#" "li_5540_8800#" 1196.25
+cap "VB" "VP" 0.150184
+cap "V2" "m1_5530_420#" 11.7538
+cap "bias_gen_0/a_2940_0#" "bias_gen_0/VBN" 1.82796
+cap "diff_amp_0/VCN" "bias_gen_0/VBN" -3.19744e-14
+cap "bias_gen_0/VN" "diff_amp_0/VCN" 3.13416
+cap "bias_gen_0/VN" "diff_amp_0/a_410_n200#" 0.765547
+cap "bias_gen_0/VN" "bias_gen_0/VBN" 70.9381
+cap "bias_gen_0/VN" "bias_gen_0/VBN" 276.413
+cap "bias_gen_0/VN" "diff_amp_0/a_410_n200#" 0.279852
+cap "bias_gen_0/a_2940_0#" "bias_gen_0/VBN" 1.87232
+cap "diff_amp_0/VCN" "bias_gen_0/VBN" 1.78239
+cap "bias_gen_0/VN" "bias_gen_0/VBN" 0.0978425
+cap "diff_amp_0/a_410_n200#" "bias_gen_0/a_2940_0#" 0.019009
+cap "diff_amp_0/VCN" "diff_amp_0/a_410_n200#" 0.142052
+cap "diff_amp_0/a_410_n200#" "bias_gen_0/VBN" 0.0321439
+cap "bias_gen_0/VN" "bias_gen_0/a_2940_0#" 0.151953
+cap "bias_gen_0/VN" "diff_amp_0/VCN" -2.66454e-15
+cap "diff_amp_0/a_310_n90#" "diff_amp_0/VN" 0.0624359
+cap "diff_amp_0/VN" "diff_amp_0/Vout" 0.0932711
+cap "diff_amp_0/VBN" "diff_amp_0/VN" 76.2341
+cap "diff_amp_0/VN" "diff_amp_0/a_710_n90#" 0.0335393
+cap "bias_gen_0/VBN" "diff_amp_0/VBN" 0.1895
+cap "diff_amp_0/VN" "diff_amp_0/VBN" 359.868
+cap "diff_amp_0/VN" "diff_amp_0/a_410_n200#" 0.0489697
+cap "diff_amp_0/VBN" "diff_amp_0/a_410_n200#" 0.00540213
+cap "diff_amp_0/Vout" "diff_amp_0/VN" 0.0107818
+cap "diff_amp_0/VN" "bias_gen_0/a_3580_6000#" -1.13687e-13
+cap "diff_amp_0/VN" "diff_amp_0/VBN" 0.0108251
+cap "diff_amp_0/VN" "diff_amp_0/a_410_n200#" 0.00414152
+cap "diff_amp_0/VN" "diff_amp_0/V1" 0.229952
+cap "diff_amp_0/VN" "diff_amp_0/V2" 2.14888
+cap "diff_amp_0/V1" "diff_amp_0/V2" -8.64407
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VN" 0.0396406
+cap "diff_amp_0/VBN" "diff_amp_0/VN" 0.561013
+cap "diff_amp_0/VBN" "diff_amp_0/Vout" 8.41632
+cap "diff_amp_0/VBN" "diff_amp_0/VN" 36.4071
+cap "diff_amp_0/VBN" "diff_amp_0/a_410_n200#" 0.0334249
+cap "diff_amp_0/V1" "bias_gen_0/VB" 0.0485559
+cap "diff_amp_0/Vout" "diff_amp_0/VN" 6.77264
+cap "diff_amp_0/VN" "diff_amp_0/VN" 0.886805
+cap "diff_amp_0/VN" "diff_amp_0/V2" -3.45603
+cap "bias_gen_0/a_4180_3000#" "diff_amp_0/VN" 0.0266083
+cap "diff_amp_0/V1" "diff_amp_0/VN" -2.81654
+cap "diff_amp_0/Vout" "bias_gen_0/VB" 0.214033
+cap "diff_amp_0/VN" "bias_gen_0/VB" 0.0932711
+cap "diff_amp_0/VN" "diff_amp_0/a_1990_5740#" 1.13687e-13
+cap "diff_amp_0/a_410_n200#" "diff_amp_0/VN" 0.114263
+cap "diff_amp_0/a_410_n200#" "diff_amp_0/VBN" 0.012605
+cap "diff_amp_0/VBN" "diff_amp_0/VN" 5.68434e-14
+cap "diff_amp_0/Vout" "bias_gen_0/VB" 0.404927
+cap "diff_amp_0/VN" "diff_amp_0/Vout" 7.13541
+cap "bias_gen_0/VN" "bias_gen_0/VP" -1.97015
+cap "bias_gen_0/VB" "bias_gen_0/VP" -0.150184
+cap "bias_gen_0/VB" "bias_gen_0/VN" -0.868418
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VP" -1.13687e-13
+cap "diff_amp_0/VP" "bias_gen_0/a_3420_6000#" 5.68434e-14
+cap "bias_gen_0/a_3420_6000#" "diff_amp_0/VP" 5.68434e-14
+cap "bias_gen_0/VBP" "diff_amp_0/VP" -2.84217e-14
+cap "diff_amp_0/VBP" "diff_amp_0/VP" 0.0242252
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VN" 1.31398
+cap "diff_amp_0/VP" "bias_gen_0/VP" 0.314634
+cap "diff_amp_0/VP" "bias_gen_0/a_3420_6000#" 5.68434e-14
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/Vout" 1.50701
+cap "diff_amp_0/VP" "diff_amp_0/VN" -0.666667
+cap "diff_amp_0/VP" "bias_gen_0/VB" -3.55271e-15
+cap "bias_gen_0/a_3420_6000#" "diff_amp_0/VP" 5.68434e-14
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/a_110_2950#" 1.34085
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VP" 0.0693767
+cap "diff_amp_0/VP" "diff_amp_0/Vout" 0.211623
+cap "diff_amp_0/VP" "diff_amp_0/VCP" 0.0543978
+cap "diff_amp_0/a_510_2950#" "diff_amp_0/VN" 0.0446803
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VN" 0.0534157
+cap "diff_amp_0/a_110_2950#" "diff_amp_0/VP" 0.00868072
+cap "diff_amp_0/VP" "diff_amp_0/VP" 0.14226
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VP" 0.472144
+cap "diff_amp_0/VP" "bias_gen_0/a_3420_6000#" 5.68434e-14
+cap "diff_amp_0/VN" "diff_amp_0/Vout" 0.637681
+cap "diff_amp_0/VP" "bias_gen_0/VP" 0.324324
+cap "diff_amp_0/VCP" "diff_amp_0/VP" 0.017748
+cap "diff_amp_0/VP" "diff_amp_0/a_410_n200#" 0.00275278
+cap "diff_amp_0/a_110_2950#" "diff_amp_0/VN" 0.0932711
+cap "diff_amp_0/a_510_2950#" "diff_amp_0/VP" 0.0043637
+cap "diff_amp_0/VN" "diff_amp_0/a_310_2950#" 0.0624359
+cap "diff_amp_0/VBP" "diff_amp_0/VP" 0.0349342
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VN" 0.00900355
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/a_110_2950#" 1.33508
+cap "diff_amp_0/VN" "diff_amp_0/Vout" 0.867932
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VN" 1.2942
+cap "diff_amp_0/VP" "diff_amp_0/VP" 0.906393
+cap "diff_amp_0/VBP" "diff_amp_0/VP" -2.84217e-14
+cap "bias_gen_0/a_3420_6000#" "diff_amp_0/Vout" 0.0237987
+cap "diff_amp_0/VP" "diff_amp_0/Vout" 1.2703
+cap "diff_amp_0/a_310_2950#" "diff_amp_0/Vout" -4.44089e-16
+cap "bias_gen_0/VB" "diff_amp_0/Vout" 0.0101038
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VP" 0.0305714
+cap "bias_gen_0/VP" "diff_amp_0/VP" 0.324324
+cap "diff_amp_0/VP" "diff_amp_0/a_110_2950#" -1.7053e-13
+cap "diff_amp_0/VP" "diff_amp_0/VN" -0.666667
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/Vout" 1.52135
+cap "diff_amp_0/VN" "bias_gen_0/VB" 2.34401
+cap "diff_amp_0/Vout" "bias_gen_0/VP" 0.0819784
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/Vout" 0.0555014
+cap "diff_amp_0/VP" "diff_amp_0/a_410_n200#" -5.68434e-14
+cap "diff_amp_0/VP" "diff_amp_0/VBP" -2.84217e-14
+cap "diff_amp_0/a_1590_5740#" "diff_amp_0/VP" -1.13687e-13
+cap "diff_amp_0/Vout" "diff_amp_0/VP" 4.54747e-13
+cap "diff_amp_0/VBP" "diff_amp_0/VP" -2.84217e-14
+cap "diff_amp_0/a_1270_2260#" "diff_amp_0/VP" -5.68434e-14
+cap "diff_amp_0/VBP" "diff_amp_0/VP" -2.84217e-14
+cap "diff_amp_0/a_1990_5740#" "diff_amp_0/VP" -5.68434e-14
+cap "bias_gen_0/a_3420_6000#" "diff_amp_0/VP" -2.27374e-13
+cap "bias_gen_0/VBP" "diff_amp_0/VP" -5.68434e-14
+cap "bias_gen_0/VCP" "diff_amp_0/VP" -2.27374e-13
+cap "bias_gen_0/a_3580_6000#" "diff_amp_0/VP" 1.13687e-13
+cap "bias_gen_0/VBN" "diff_amp_0/VP" 2.27374e-13
+cap "diff_amp_0/VP" "diff_amp_0/VBP" 446.546
+cap "diff_amp_0/VBP" "bias_gen_0/VP" 0.881407
+cap "diff_amp_0/VBP" "bias_gen_0/a_3420_6000#" 19.672
+cap "diff_amp_0/VBP" "bias_gen_0/a_3580_6000#" 3.98968
+cap "diff_amp_0/VP" "bias_gen_0/a_3420_6000#" 0.764294
+cap "diff_amp_0/VP" "bias_gen_0/a_3580_6000#" 0.289479
+cap "diff_amp_0/VCP" "diff_amp_0/VBP" 0.0533018
+cap "diff_amp_0/VP" "diff_amp_0/VCP" 40.1487
+cap "diff_amp_0/VCP" "bias_gen_0/VP" 0.0806001
+cap "diff_amp_0/VCP" "bias_gen_0/a_3420_6000#" 0.026452
+cap "diff_amp_0/VCP" "bias_gen_0/a_3580_6000#" 1.98014
+cap "diff_amp_0/VP" "bias_gen_0/a_3420_6000#" 0.289304
+cap "diff_amp_0/VCP" "diff_amp_0/VP" 2.56967
+cap "bias_gen_0/a_3420_6000#" "diff_amp_0/VBP" 0.378338
+cap "diff_amp_0/VCP" "bias_gen_0/a_3580_6000#" 1.29915
+cap "diff_amp_0/VCP" "diff_amp_0/VBP" -3.42189
+cap "diff_amp_0/VP" "bias_gen_0/a_3580_6000#" 0.170213
+cap "diff_amp_0/VCP" "bias_gen_0/a_3420_6000#" 0.0237015
+cap "diff_amp_0/VP" "diff_amp_0/VBP" -0.202802
+cap "diff_amp_0/VP" "diff_amp_0/VCP" 53.0624
+cap "diff_amp_0/VP" "diff_amp_0/VBP" 688.444
+cap "bias_gen_0/a_3580_6000#" "bias_gen_0/VBP" 0.0703829
+cap "bias_gen_0/VP" "bias_gen_0/VCP" 16.9723
+cap "bias_gen_0/VBP" "bias_gen_0/VBP" 0.0802901
+cap "bias_gen_0/VP" "bias_gen_0/VBP" 237.717
+merge "diff_amp_0/V1" "V1" -28.0384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "diff_amp_0/V2" "V2" -33.1158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "diff_amp_0/VN" "VN" -4902.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -360400 -19360 0 0 0 0 0 0 0 0 0 0
+merge "VN" "m1_5530_420#"
+merge "m1_5530_420#" "bias_gen_0/VN"
+merge "bias_gen_0/VN" "VSUBS"
+merge "bias_gen_0/VBP" "diff_amp_0/VBP" -636.797 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -400 -180 0 0 0 0 0 0 0 0 0 0 0 0
+merge "diff_amp_0/VBP" "li_5540_8800#"
+merge "bias_gen_0/VCP" "diff_amp_0/VCP" -61.5311 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2000 -260 0 0 0 0 0 0 0 0 0 0 0 0
+merge "diff_amp_0/VCP" "li_5540_11880#"
+merge "bias_gen_0/VP" "VP" -2927.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -49200 -9780 0 0 0 0 0 0 0 0 0 0
+merge "VP" "diff_amp_0/VP"
+merge "diff_amp_0/VP" "m1_5530_6250#"
+merge "bias_gen_0/VB" "VB" -34.0396 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "bias_gen_0/VCN" "diff_amp_0/VCN" -35.1477 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "diff_amp_0/VCN" "li_5540_0#"
+merge "diff_amp_0/VBN" "bias_gen_0/VBN" -735.98 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "bias_gen_0/VBN" "li_5540_90#"
+merge "diff_amp_0/Vout" "Vout" -34.0396 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
