@@ -1,0 +1,137 @@
+//////////////// VIEW PROBLEM FILE ////////////////
+$ cd skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/
+$ cd cells
+$ cd nfet_01v8
+$ less sky130_fd_pr__nfet_01v8__ss.pm3.spice
+
+
+--------------------------------------------------------------------------------------
+//////////////// APPLYING PYTHON SCRIPT ////////////////
+$ cd ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/
+$ cp ~/Downloads/ic_tools_install-main/july-2023-scripts/process_mismatch_params.py process_mismatch_params.py
+$ python3 process_mismatch_params.py
+
+//////////////// VIEW CHANGES ////////////////
+$ cd skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest
+$ cd cells/nfet_01v8
+$ ls 
+###can see a bunch of new files 
+$ ls sky130_fd_pr__nfet_01v8__ss.pm3.spice
+###the file has been changed
+
+
+--------------------------------------------------------------------------------------
+//////////////// CHANGE SIMULATION MODELS ////////////////
+$ cd /usr/local/share/xschem/xschem_library/madvlsi
+$ sudo vim ff_models.sym
+###add a new line after `value=\\".option wnflag=1`:
+`.param MC_SWITCH=0.0`
+###EXIT
+$ sudo vim fs_models.sym
+###do the same thing to ss, sf and tt models 
+###EXIT
+
+//////////////// SIMULATE WITH GAUSS VARIATIONS ////////////////
+### simulate with `.param MC_SWITCH=1.0` - just change in xschem TT models - should see some discrepancies
+--------------------------------------------------------------------------------------
+//////////////// BATCH MODE AND DATA EXPORT ////////////////
+
+//////////////// CONTROL BLOCK STARTS HERE ////////////////
+.control
+	set wr_vecnames
+	set wr_singlescale
+
+	let mc_runs = 10
+	let run = 1
+	dowhile run <= mc_runs
+		dc vin 0 1.8 0.01
+		wrdata ~/Documents/mctut/<filename>{$&run}.txt v(Vout)
+		reset
+		let run = run + 1
+	end
+.endc
+//////////////// CONTROL BLOCK ENDS HERE ////////////////
+
+
+//////////////// RUN SIMULATION ////////////////
+### do `netlist`-`simulate`
+//////////////// NGSPICE SIM COMMANDS START HERE ////////////////
+$ setplot
+$ setplot new
+$ plot dc1.v(Vout) dc2.v(Vout) dc3.v(Vout) dc4.v(Vout) dc5.v(Vout) dc6.v(Vout) dc7.v(Vout) dc8.v(Vout) dc9.v(Vout) dc10.v(Vout)
+//////////////// NGSPICE SIM COMMANDS END HERE ////////////////
+
+
+---------------------------------------------------------------------------------------
+//////////////// TERMINAL COMMANDS START HERE ////////////////
+$ cd Documents/mctut
+### should see the .txt file
+
+
+---------------------------------------------------------------------------------------
+//////////////// R-2R LADDER SIMULATION CONTROL BLOCK STARTS HERE ////////////////
+name=SPICE only_toplevel=false value="
+.control
+  set wr_vecnames
+  set wr_singlescale
+  let code = 0
+  while code < 120
+    if code eq 0
+      let V0 = 0
+    else
+      let V0 = code % 2
+    end
+    if floor(code / 2) eq 0
+      let V1 = 0
+    else
+      let V1 = floor(code / 2) % 2
+    end
+    if floor(code / 4) eq 0
+      let V2 = 0
+    else
+      let V2 = floor(code / 4) % 2
+    end
+    if floor(code / 8) eq 0
+      let V3 = 0
+    else
+      let V3 = floor(code / 8) % 2
+    end
+    if floor(code / 16) eq 0
+      let V4 = 0
+    else
+      let V4 = floor(code / 16) % 2
+    end
+    if floor(code / 32) eq 0
+      let V5 = 0
+    else
+      let V5 = floor(code / 32) % 2
+    end
+    if floor(code / 64) eq 0
+      let V6 = 0
+    else
+      let V6 = floor(code / 64) % 2
+    end
+    save all
+    op
+    wrdata ~/Documents/MP4/simulation_second{$&run}.txt v(V1) v(V2) v(V3) v(V4) v(V5) v(V6) v(V_fout) i(V_Ifout)
+    if code eq 0
+      set appenwrite
+      set wr_vecnames = FALSE
+    end
+    let code = code + 1
+  end
+  quit
+.endc
+//////////////// R-2R LADDER SIMULATION CONTROL BLOCK ENDS HERE ////////////////
+
+
+-------------------------------------------------------------------------------------
+//////////////// GAUSSRESDEF CONTROL BLOCK STARTS HERE ////////////////
+name = GAUSSRESDEF only_toplevel=false value=".param MC_SWITCH=0.0
+.subckt gaussres pos neg
+.param nom=1k cv=0.005
+R1 pos neg {nom + MC_SWITCH*AGAUSS(0,1,1)*cv*nom}
+.ends"
+//////////////// GAUSSRESDEF CONTROL BLOCK ENDS HERE ////////////////
+
+

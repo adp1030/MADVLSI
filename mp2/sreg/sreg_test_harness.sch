@@ -101,10 +101,10 @@ N -420 200 -420 210 {
 lab=D}
 N -420 270 -420 280 {
 lab=GND}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} -80 20 0 0 {name=X1}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 90 20 0 0 {name=X2}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 250 20 0 0 {name=X3}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 410 20 0 0 {name=X4}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} -80 20 0 0 {name=X1}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 90 20 0 0 {name=X2}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 250 20 0 0 {name=X3}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 410 20 0 0 {name=X4}
 C {madvlsi/vdd.sym} -160 -140 3 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} -160 120 1 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} -160 80 0 0 {name=p1 sig_type=std_logic lab=CLK}
@@ -116,7 +116,7 @@ C {devices/lab_pin.sym} 160 10 3 0 {name=p6 sig_type=std_logic lab=Qb0}
 C {devices/lab_pin.sym} 330 10 3 0 {name=p7 sig_type=std_logic lab=Qb1}
 C {devices/lab_pin.sym} 490 10 3 0 {name=p8 sig_type=std_logic lab=Qb2}
 C {devices/lab_pin.sym} 660 10 3 0 {name=p9 sig_type=std_logic lab=Qb3}
-C {/home/madvlsi/Documents/mp1/inverter/inverter.sym} -140 10 0 0 {name=X5}
+C {/home/madvlsi/Documents/MADVLSI/mp1/inverter/inverter.sym} -140 10 0 0 {name=X5}
 C {devices/lab_pin.sym} -160 -60 0 0 {name=p10 sig_type=std_logic lab=D}
 C {madvlsi/tt_models.sym} -450 -230 0 0 {
 name=TT_MODELS

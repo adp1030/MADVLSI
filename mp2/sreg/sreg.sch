@@ -77,14 +77,14 @@ N -10 -20 -10 10 {
 lab=#net7}
 N -10 -20 20 -20 {
 lab=#net7}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} -80 20 0 0 {name=X1}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 90 20 0 0 {name=X2}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 250 20 0 0 {name=X3}
-C {/home/madvlsi/Documents/mp2/d_flipflop/d_flipflop.sym} 410 20 0 0 {name=X4}
+C {/home/madvlsi/Documents//MADVLSI/mp2/d_flipflop/d_flipflop.sym} -80 20 0 0 {name=X1}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 90 20 0 0 {name=X2}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 250 20 0 0 {name=X3}
+C {/home/madvlsi/Documents/MADVLSI/mp2/d_flipflop/d_flipflop.sym} 410 20 0 0 {name=X4}
 C {devices/iopin.sym} -160 -140 2 0 {name=p1 lab=VP}
 C {devices/iopin.sym} -160 120 2 0 {name=p2 lab=VN}
 C {devices/ipin.sym} -160 80 0 0 {name=p3 lab=CLK}
 C {devices/ipin.sym} -160 -60 0 0 {name=p4 lab=D}
 C {devices/opin.sym} 660 10 1 0 {name=p6 lab=Qb}
 C {devices/opin.sym} 660 -90 3 0 {name=p5 lab=Q}
-C {/home/madvlsi/Documents/mp2/sreg_inverter/sreg_inverter.sym} -140 10 0 0 {name=X5}
+C {/home/madvlsi/Documents/MADVLSI/mp2/sreg_inverter/sreg_inverter.sym} -140 10 0 0 {name=X5}
